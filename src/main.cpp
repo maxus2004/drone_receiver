@@ -118,19 +118,19 @@ void loop() {
         crsf_sendChannels(&rc_channels);
 
         Serial.print("X1: ");
-        Serial.println(rc_channels.roll);
+        Serial.println(controls.x1);
         Serial.print("Y1: ");
-        Serial.println(rc_channels.pitch);
+        Serial.println(controls.y1);
         Serial.print("X2: ");
-        Serial.println(rc_channels.yaw);
+        Serial.println(controls.x2);
         Serial.print("Y2: ");
-        Serial.println(rc_channels.thrust);
+        Serial.println(controls.y2);
         Serial.print("B1: ");
-        Serial.println(rc_channels.aux1);
+        Serial.println(controls.b1);
         Serial.print("B2: ");
-        Serial.println(rc_channels.aux2);
+        Serial.println(controls.b2);
         Serial.print("B3: ");
-        Serial.println(rc_channels.aux3);
+        Serial.println(controls.b3);
     } else if (packet_type == 1) {
         memcpy(&radioSettings, data + 5, sizeof(RadioSettings));
 
